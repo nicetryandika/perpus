@@ -34,7 +34,7 @@
                         <td>'.$data['waktu'].'</td>
                         <td class="text-center">
                             <a href="index.php?module=edit_data_peminjaman&id_peminjaman='.$data['id_peminjaman'].'" class="btn btn-primary btn btn-sm">Edit</a>
-                            <a href="index.php?module=detail_data_peminjaman&id_peminjaman='.$data['nama_anggota'].'" class="btn btn-sm" style="background-color: green; color: white;">Detail</a>
+                            <a href="index.php?module=detail_data_peminjaman&id_peminjaman='.$data['id_peminjaman'].'" class="btn btn-sm" style="background-color: green; color: white;">Detail</a>
                             <a href="module/peminjaman/aksi_hapus_data_peminjaman.php?id_peminjaman='.$data['id_peminjaman'].'" onclick="return confirm(\'Apa anda yakin ingin menghapus '.$data['nama_anggota'].'?\')" class="btn btn-danger btn btn-sm">Hapus</a>
                         </tr>';
                     $i++;

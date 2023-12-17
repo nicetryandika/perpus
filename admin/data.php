@@ -1,5 +1,6 @@
 <?php
 
+// BUKU
 if($_GET['module']=="buku"){
     include "module/buku/buku.php";
 }
