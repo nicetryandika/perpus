@@ -43,4 +43,10 @@ else if ($_GET['module']=="edit_data_peminjaman"){
 else if ($_GET['module']=="detail_data_peminjaman"){
     include "module/peminjaman/detail_data_peminjaman.php";
 }
+else if ($_GET['module']=="tambah_data_buku_peminjaman"){
+    include "module/peminjaman/tambah_data_buku_peminjaman.php";
+}
+else if ($_GET['module']=="edit_data_buku_peminjaman"){
+    include "module/peminjaman/edit_data_buku_peminjaman.php";
+}
 ?>

@@ -1,3 +1,13 @@
+<?php 
+include "/xampp/htdocs/perpus/admin/config/koneksi.php";
+
+mysqli_query($conn, "INSERT INTO peminjaman (id_anggota, id_staff, tanggal, waktu) 
+VALUES ('$_POST[idAnggota]', '$_POST[idStaff]', '$_POST[tanggalPinjam]', '$_POST[waktuPinjam]')")
+or die(mysqli_error($conn));
+
+header("location:../../index.php?module=peminjaman");
+?>
+
 <!-- <?php 
 // include "/xampp/htdocs/perpus/admin/config/koneksi.php";
 // {
@@ -11,13 +21,3 @@
 // }
 // ?>
 YANG DI KOLOM SIKU ITU VALUES DARI FORM TAMBAH BUKU -->
-
-<?php 
-include "/xampp/htdocs/perpus/admin/config/koneksi.php";
-
-mysqli_query($conn, "INSERT INTO peminjaman (id_anggota, id_staff, tanggal, waktu) 
-VALUES ('$_POST[idAnggota]', '$_POST[idStaff]', '$_POST[tanggalPinjam]', '$_POST[waktuPinjam]')")
-or die(mysqli_error($conn));
-
-header("location:../../index.php?module=peminjaman");
-?>

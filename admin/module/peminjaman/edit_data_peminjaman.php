@@ -44,6 +44,8 @@
                                 <input type="text" value="<?php echo $data['waktu']; ?>" class="form-control" id="" name="waktuPinjam" placeholder="Silahkan Masukan Waktu Peminjaman">
                             </div>
                             <button type="submit" class="btn btn-primary">Edit Data Peminjaman</button>
+                            <button type="button" class="btn btn-primary"
+                            onclick="location.href='index.php?module=peminjaman';">Kembali</button>
                         </form>
                     </div>
                 </div>
