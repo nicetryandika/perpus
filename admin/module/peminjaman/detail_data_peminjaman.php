@@ -44,7 +44,7 @@ include "/xampp/htdocs/perpus/admin/config/koneksi.php";
             </div>
             <button type="button" class="btn btn-primary"
             onclick="location.href='index.php?module=peminjaman';">Kembali</button>
-            <?php ?>
+<?php ?>
 
     <!-- Tampilkan Data Peminjaman Buku -->
     <!-- Ini berada di tabel detail_peminjaman -->
@@ -84,7 +84,7 @@ include "/xampp/htdocs/perpus/admin/config/koneksi.php";
                         <td>'.$detail_buku['penulis'].'</td>
                         <td>'.$detail_buku['penerbit'].'</td>
                         <td class="text-center">
-                            <a href="index.php?module=edit_data_buku_peminjaman&id_buku='.$detail_buku['kd_buku'].'" class="btn btn-primary btn btn-sm">Edit</a>
+                            <a href="index.php?module=edit_data_buku_peminjaman&kd_buku='.$detail_buku['kd_buku'].'" class="btn btn-primary btn btn-sm">Edit</a>
                             <a href="module/peminjaman/aksi_hapus_data_peminjaman_buku.php?id_buku='.$detail_buku['kd_buku'].'"
                             onclick="return confirm(\'Apa anda yakin ingin menghapus '.$detail_buku['judul_buku'].'?\')" class="btn btn-danger btn btn-sm">Hapus</a>
                         </td>

@@ -10,13 +10,6 @@
                         <h4 class="card-title">Form Edit Data Peminjaman</h4>
                         <?php
                         include "/xampp/htdocs/perpus/admin/config/koneksi.php";
-                        // if (isset($_GET['id_anggota'])){
-                        //     // $id = $_GET['nama_anggota']; ///workkkkk ditinggal ngelamun bisa wkwkk
-                        // };
-                            // $id = $_GET['id_peminjaman'];
-                            // $sql = "SELECT * FROM peminjaman where id_peminjaman='$id'"; //anjir ditinggal bisa
-                            // $ress = mysqli_query($conn, $sql);
-                            // $data = mysqli_fetch_array($ress);
                             $id = $_GET['id_peminjaman'];
                             $sql = "select * from peminjaman where id_peminjaman='$id'";
                             $ress = mysqli_query($conn, $sql);

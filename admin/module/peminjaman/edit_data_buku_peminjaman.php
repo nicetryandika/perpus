@@ -11,8 +11,8 @@
                             include "/xampp/htdocs/perpus/admin/config/koneksi.php";
 
                             if ($_SERVER["REQUEST_METHOD"] == "GET") {
-                                $id_buku= $_GET["id_buku"];
-                                $sql = "SELECT * FROM peminjaman WHERE id_peminjaman = '$id_buku'";
+                                $kd_buku = $_GET["kd_buku"];
+                                $sql = "SELECT * FROM detail_peminjaman WHERE id_buku = '$kd_buku'";
                                 $result = mysqli_query($conn, $sql);
                                 $data = mysqli_fetch_array($result);
                             }
@@ -23,7 +23,7 @@
                                 <input type="hidden" class="form-control" id="" name="idPeminjaman" value="<?php echo $data['id_peminjaman'];?>" required>
                             </div>
                             <div class="form-group">
-                                <label for="idBuku">Kode Buku</label>   
+                                <label for="Buku">Kode Buku</label>   
                                 <input type="text" class="form-control" id="" name="idBuku" value="" required>
                             </div>
                             <button type="submit" class="btn btn-primary">Edit Data Peminjaman</button>
