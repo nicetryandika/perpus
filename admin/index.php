@@ -51,10 +51,11 @@
              <!-- Ganti "Profile" dengan sesuatu yang sesuai dengan session pengguna -->
              <?php
                     if (isset($_SESSION['staff_username'])) {
-                        echo '<a class="dropdown-item" href="">'.$_SESSION['staff_username'].'</a>';
-                    }
+                        echo '<a class="dropdown-item" href="">'.$_SESSION['staff_username'].' (' . $_SESSION['auth_level'] . ')</span>';
+                      }'</a>';
                     // Memeriksa apakah session waktu login ada dan belum timeout
-                    if (isset($_SESSION['login_time']) && (time() - $_SESSION['login_time'] > 5)) { // 900 detik = 15 menit
+                    if (isset($_SESSION['login_time']) && (time() - $_SESSION['login_time'] > 900)) { // 900 detik = 15 menit
+                      $_SESSION['auth_level'] = 'level'; // Set level otorisasi pengguna
                       // Session timeout, hapus semua session dan redirect ke halaman login
                       session_unset();
                       session_destroy();
