@@ -26,10 +26,10 @@ if ($result->num_rows > 0) {
     // Simpan informasi staff ke sesi
     $_SESSION['staff_id'] = $staff_data['id_staff'];
     $_SESSION['staff_username'] = $staff_data['username_staff'];
-    $_SESSION['auth_level'] = $level = ['level']; // Set level otorisasi pengguna
+     // Set level otorisasi pengguna
+    $_SESSION['auth_level'] = $staff_data ['level'];
     // Set session waktu login
     $_SESSION['login_time'] = time();
-
 
     echo "<script>alert('Login berhasil!'); window.location.href='index.php?module=';</script>";
 } else {

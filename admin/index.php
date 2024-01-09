@@ -50,24 +50,21 @@
              <!-- MENAMPILKAN VALIDASI SESSION -->
              <!-- Ganti "Profile" dengan sesuatu yang sesuai dengan session pengguna -->
              <?php
-                    if (isset($_SESSION['staff_username'])) {
-                        echo '<a class="dropdown-item" href="">'.$_SESSION['staff_username'].' (' . $_SESSION['auth_level'] . ')</span>';
-                      }'</a>';
+                    if (isset($_SESSION['staff_username'], $_SESSION['auth_level'])) {
+                      echo '<a class="dropdown-item" href="">' . $_SESSION['staff_username'] . ' (' . $_SESSION['auth_level'] . ')</a>';
+                  }
                     // Memeriksa apakah session waktu login ada dan belum timeout
                     if (isset($_SESSION['login_time']) && (time() - $_SESSION['login_time'] > 900)) { // 900 detik = 15 menit
-                      $_SESSION['auth_level'] = 'level'; // Set level otorisasi pengguna
-                      // Session timeout, hapus semua session dan redirect ke halaman login
-                      session_unset();
-                      session_destroy();
-                      header("Location: logout.php");
-                      exit();
+                        // Session timeout, hapus semua session dan redirect ke halaman login
+                        session_unset();
+                        session_destroy();
+                        header("Location: logout.php");
+                        exit();
                     } else {
-                      // Update waktu login pada setiap akses halaman
-                      $_SESSION['login_time'] = time();
+                        // Update waktu login pada setiap akses halaman
+                        $_SESSION['login_time'] = time();
                     }
               ?>
-              <a class="dropdown-item" href="#">Settings</a>
-              <a class="dropdown-item" href="#">Activities</a>
               <a class="dropdown-item" href="logout.php">Sign Out</a>
             </div>
           </li>
