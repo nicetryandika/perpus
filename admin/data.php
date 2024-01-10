@@ -49,4 +49,31 @@ else if ($_GET['module']=="tambah_data_buku_peminjaman"){
 else if ($_GET['module']=="edit_data_buku_peminjaman"){
     include "module/peminjaman/edit_data_buku_peminjaman.php";
 }
+//PENGEMBALIAN
+else if ($_GET['module']=="pengembalian"){
+    include "module/pengembalian/pengembalian.php";
+}
+else if ($_GET['module']=="tambah_data_pengembalian"){
+    include "module/pengembalian/tambah_data_pengembalian.php";
+}
+else if ($_GET['module']=="edit_data_pengembalian"){
+    include "module/pengembalian/edit_data_pengembalian.php";
+}
+else if ($_GET['module']=="detail_data_pengembalian"){
+    include "module/pengembalian/detail_data_pengembalian.php";
+}
+// 
+else if ($_GET['module']=="tambah_data_buku_peminjaman"){
+    include "module/pengembalian/tambah_data_buku_peminjaman.php";
+}
+else if ($_GET['module']=="edit_data_buku_peminjaman"){
+    include "module/pengembalian/edit_data_buku_peminjaman.php";
+}
+//LAPORAN
+else if ($_GET['module']=="laporan_peminjaman"){
+    include "module/laporan/laporan_peminjaman.php";
+}
+else if ($_GET['module']=="laporan_peminjaman_buku"){
+    include "module/laporan/laporan_peminjaman_buku.php";
+}
 ?>

@@ -1,6 +1,15 @@
+
 <?php 
   include "config/koneksi.php";
-  session_start();
+// index.php
+
+session_start();
+
+// Periksa apakah pengguna sudah login
+if (!isset($_SESSION['staff_id'])) {
+    header("Location: login.php");
+    exit();
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -33,12 +42,11 @@
   <body class="vertical  light  ">
     <div class="wrapper">
       <nav class="topnav navbar navbar-light">
-        <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar">
-          <i class="fe fe-menu navbar-toggler-icon"></i>
+        <button type="button" class="navbar-toggler text-muted mt-2 p-0 mr-3 collapseSidebar" style="border: none; background: none;" 
+          onclick="window.location.href='https://github.com/nicetryandika/perpus.git'">
+          <span class="fe fe-github navbar-toggler-icon" style="font-size: 24px;"></span>
+          <span class="ml-2" style="font-size: 14px; vertical-align: middle;">Visit my GitHub Repository</span>
         </button>
-        <form class="form-inline mr-auto searchform text-muted">
-          <input class="form-control mr-sm-2 bg-transparent border-0 pl-4 text-muted" type="search" placeholder="Type something..." aria-label="Search">
-        </form>
         <ul class="nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-muted pr-0" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -100,7 +108,7 @@
             <ul class="navbar-nav flex-fill w-100 mb-2">
                 <li class="nav-item dropdown">
                     <a href="#data" data-toggle="collapse" aria-expanded="false" aria-controls="data" class="dropdown-toggle nav-link">
-                        <i class="fe fe-credit-card fe-16"></i>
+                        <i class="fe fe-folder fe-16"></i>
                         <span class="ml-3 item-text">Data</span>
                     </a>
                     <ul class="collapse list-unstyled pl-4 w-100" id="data">
@@ -140,6 +148,26 @@
                     </ul>
                 </li>
             </ul>
+            <ul class="navbar-nav flex-fill w-100 mb-2">
+                <li class="nav-item dropdown">
+                    <a href="#laporan" data-toggle="collapse" aria-expanded="false" aria-controls="laporan" class="dropdown-toggle nav-link">
+                        <i class="fe fe-archive fe-16"></i>
+                        <span class="ml-3 item-text">Laporan</span>
+                    </a>
+                    <ul class="collapse list-unstyled pl-4 w-100" id="laporan">
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="?module=laporan_peminjaman">
+                              <span class="ml-1 item-text">Laporan Peminjaman</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- <ul class="collapse list-unstyled pl-4 w-100" id="laporan">
+                        <li class="nav-item">
+                            <a class="nav-link pl-3" href="?module=laporan_peminjaman_buku">
+                              <span class="ml-1 item-text">Laporan Peminjaman Buku</span>
+                            </a>
+                        </li>
+                    </ul> -->
         </nav>
       </aside>
       <main role="main" class="main-content">
