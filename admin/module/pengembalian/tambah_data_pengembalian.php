@@ -6,8 +6,8 @@
             <div class="col-12 grid-margin stretch-card">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="card-title">Form Tambah Data Peminjaman</h4>
-                        <form class="forms-sample" action="module/peminjaman/aksi_tambah_data_peminjaman.php" method="post" id="bukuForm">
+                        <h4 class="card-title">Form Tambah Data Pengembalian</h4>
+                        <form class="forms-sample" action="module/pengembalian/aksi_tambah_data_pengembalian.php" method="post" id="bukuForm">
                             <div class="form-group">
                                 <label for="idAnggota">ID Anggota</label>
                                 <input type="text" class="form-control" id="" name="idAnggota" placeholder="Silahkan Masukan ID Anggota">
@@ -17,15 +17,15 @@
                                 <input type="text" class="form-control" id="" name="idStaff" placeholder="Silahkan Masukan ID Staff">
                             </div>
                             <div class="form-group">
-                                <label for="tanggalPinjam">Tanggal Peminjaman</label>
-                                <input type="date" class="form-control" id="" name="tanggalPinjam" placeholder="Silahkan Masukan Tanggal Peminjaman">
+                                <label for="tanggalKembali">Tanggal Pengembalian</label>
+                                <input type="date" class="form-control" id="" name="tanggalKembali" placeholder="Silahkan Masukan Tanggal Pengembalian">
                             </div>
                             <div class="form-group">
-                                <label for="waktuPinjam">Waktu Peminjaman</label>
-                                <input type="time" class="form-control" id="" name="waktuPinjam" placeholder="Silahkan Masukan Waktu Peminjaman">
+                                <label for="waktuKembali">Waktu Pengembalian</label>
+                                <input type="time" class="form-control" id="" name="waktuKembali" placeholder="Silahkan Masukan Waktu Pengembalian">
                             </div>
-                            <button type="submit" class="btn btn-primary">Tambah Data Peminjaman</button>
-                            <button type="button" class="btn btn-primary" onclick="location.href='index.php?module=peminjaman';">Kembali</button>
+                            <button type="submit" class="btn btn-primary">Tambah Data Pengembalian</button>
+                            <button type="button" class="btn btn-primary" onclick="location.href='index.php?module=pengembalian';">Kembali</button>
                         </form>
                     </div>
                 </div>
